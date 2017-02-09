@@ -1,0 +1,309 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
+h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+img, fieldset, a img {
+  border: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+input[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+input, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+div, input, textarea, select, button,
+h1, h2, h3, h4, h5, h6, a, span, a:focus {
+  outline: none;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.icon-cancel {
+  width: 1em;
+  height: 1em;
+  fill: initial;
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl500";
+  src: url("fonts/MuseoSansCyrl500.woff2") format("woff2"), url("fonts/MuseoSansCyrl500.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl700";
+  src: url("fonts/MuseoSansCyrl700.woff2") format("woff2"), url("fonts/MuseoSansCyrl700.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl900";
+  src: url("fonts/MuseoSansCyrl900.woff2") format("woff2"), url("fonts/MuseoSansCyrl900.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #fff;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.banner__container {
+  width: 100%;
+  height: 100%;
+  background-color: #109cfe;
+  position: relative;
+  border: none;
+  border-radius: 3px;
+}
+
+.banner__container_inner {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.banner__btn_close {
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  float: right;
+}
+
+.banner__message {
+  color: #fff;
+  text-align: center;
+  clear: right;
+}
+
+.banner__image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  margin: 0 auto;
+}
+
+.banner__btn_open {
+  font-family: "MuseoSansCyrl900", serif;
+  font-size: 17px;
+  color: #3b4952;
+  width: 247px;
+  height: 50px;
+  background-color: #fbd900;
+  margin: 0 auto;
+  border: none;
+  border-radius: 23px;
+  display: block;
+}
+
+h1 {
+  font-family: "Tahoma", serif;
+  margin-left: 20px;
+}
+
+.pages {
+  margin-left: 40px;
+}
+
+.pages li {
+  list-style-type: decimal;
+  padding: 10px;
+}
+
+.pages li a {
+  font-family: "Tahoma", serif;
+  color: #000;
+  text-decoration: none;
+}
+
+.pages li a:hover {
+  color: gray;
+}
+
+.block {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner-mobile {
+  padding: 10px;
+}
+
+.banner-mobile__btn_close {
+  margin-top: 14px;
+  margin-right: 14px;
+}
+
+.banner-mobile__message {
+  font-family: "MuseoSansCyrl500", serif;
+  font-size: 18px;
+  padding: 20px 25px;
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (414 - 320)));
+}
+
+.banner-mobile__image {
+  width: 195px;
+  height: 355px;
+}
+
+.banner-mobile__image_android {
+  width: 175px;
+  height: 355px;
+}
+
+.banner-mobile__image_ios {
+  width: 175px;
+  height: 355px;
+}
+
+.banner-mobile__image_windows {
+  width: 195px;
+  height: 360px;
+}
+
+.banner-mobile__btn_open {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.banner-tablet {
+  padding: 20px;
+}
+
+.banner-tablet__btn_close {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.banner-tablet__container {
+  padding-bottom: 67px;
+}
+
+.banner-tablet__message {
+  font-family: "MuseoSansCyrl700", serif;
+  font-size: 24px;
+  padding: 55px 0;
+  font-size: calc(24px + (30 - 24) * ((100vw - 768px) / (1024 - 768)));
+}
+
+.banner-tablet__image_android {
+  width: 395px;
+  height: 550px;
+}
+
+.banner-tablet__image_ios {
+  width: 387px;
+  height: 540px;
+}
+
+.banner-tablet__image_windows {
+  width: 332px;
+  height: 542px;
+}
+
+.banner-tablet__btn_open {
+  margin-top: 55px;
+  margin-bottom: 70px;
+}
+
+@media (min-width: 414px) {
+
+  .banner-mobile__message {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .banner-tablet__message {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .banner-tablet__message {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .banner-mobile__message {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,17 @@
+---
+title: Windows-320
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="banner banner-mobile">
+    <div class="banner__container banner-mobile__container">
+        <button class="banner__btn_close banner-mobile__btn_close">{{mixins.icon('cancel')}}</button>
+        <div class="banner__container_inner banner-mobile__container_inner">
+            <p class="banner__message banner-mobile__message">Через додаток буде швидше та зручніше</p>
+            <div class="banner__image banner-mobile__image_windows" style="background-image: url(img/windows-320.png)"></div>
+            <button class="banner__btn_open banner-mobile__btn_open">Відкрити в додатку</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
