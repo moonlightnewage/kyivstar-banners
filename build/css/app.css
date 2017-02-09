@@ -109,22 +109,29 @@ body {
   fill: #fff;
 }
 
-.banner {
+.app-badge {
   width: 100%;
   height: 100vh;
   background-color: #fff;
+  padding: 2%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
 }
 
-.banner__container {
+.app-badge__container {
   width: 100%;
   height: 100%;
   background-color: #109cfe;
   position: relative;
   border: none;
-  border-radius: 3px;
+  border-radius: 1%;
 }
 
-.banner__container_inner {
+.app-badge__container_inner {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -134,36 +141,78 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.banner__btn_close {
-  width: 22px;
-  height: 22px;
+.app-badge__btn_close {
+  margin-top: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 5%;
+  height: 5%;
   background-color: transparent;
   float: right;
 }
 
-.banner__message {
+.app-badge__message {
   color: #fff;
   text-align: center;
   clear: right;
+  margin: 0 25px;
 }
 
-.banner__image {
+.app-badge__message_mobile {
+  font-family: "MuseoSansCyrl500", serif;
+  font-size: 18px;
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (414 - 320)));
+}
+
+.app-badge__message_tablet {
+  font-family: "MuseoSansCyrl700", serif;
+  font-size: 24px;
+  font-size: calc(24px + (36 - 24) * ((100vw - 768px) / (1024 - 768)));
+}
+
+.app-badge__image {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  margin: 0 auto;
+  background-size: contain;
+  margin: 5vh auto;
 }
 
-.banner__btn_open {
+.app-badge__image_android-mob, .app-badge__image_ios-mob {
+  width: 175px;
+  height: 355px;
+}
+
+.app-badge__image_windows-mob {
+  width: 195px;
+  height: 335px;
+}
+
+.app-badge__image_android-tab {
+  width: 395px;
+  height: 550px;
+}
+
+.app-badge__image_ios-tab {
+  width: 387px;
+  height: 540px;
+}
+
+.app-badge__image_windows-tab {
+  width: 332px;
+  height: 542px;
+}
+
+.app-badge__btn_open {
   font-family: "MuseoSansCyrl900", serif;
   font-size: 17px;
+  font-size: calc(17px + (24 - 17) * ((100vw - 320px) / (1024 - 320)));
   color: #3b4952;
-  width: 247px;
-  height: 50px;
+  padding: 16px 45px;
   background-color: #fbd900;
   margin: 0 auto;
   border: none;
-  border-radius: 23px;
+  border-radius: 30px;
   display: block;
 }
 
@@ -197,112 +246,149 @@ h1 {
   display: flex;
 }
 
-.banner-mobile {
-  padding: 10px;
+@media only screen and (max-height: 550px) {
+
+  .app-badge__image_android-mob, .app-badge__image_ios-mob {
+    height: 195px;
+  }
+
+  .app-badge__image_windows-mob {
+    height: 225px;
+  }
+
+  .app-badge__image_android-tab {
+    height: 175px;
+  }
+
+  .app-badge__image_windows-tab {
+    height: 175px;
+  }
 }
 
-.banner-mobile__btn_close {
-  margin-top: 14px;
-  margin-right: 14px;
-}
+@media only screen and (max-height: 620px) {
 
-.banner-mobile__message {
-  font-family: "MuseoSansCyrl500", serif;
-  font-size: 18px;
-  padding: 20px 25px;
-  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (414 - 320)));
-}
-
-.banner-mobile__image {
-  width: 195px;
-  height: 355px;
-}
-
-.banner-mobile__image_android {
-  width: 175px;
-  height: 355px;
-}
-
-.banner-mobile__image_ios {
-  width: 175px;
-  height: 355px;
-}
-
-.banner-mobile__image_windows {
-  width: 195px;
-  height: 360px;
-}
-
-.banner-mobile__btn_open {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.banner-tablet {
-  padding: 20px;
-}
-
-.banner-tablet__btn_close {
-  margin-top: 20px;
-  margin-right: 20px;
-}
-
-.banner-tablet__container {
-  padding-bottom: 67px;
-}
-
-.banner-tablet__message {
-  font-family: "MuseoSansCyrl700", serif;
-  font-size: 24px;
-  padding: 55px 0;
-  font-size: calc(24px + (30 - 24) * ((100vw - 768px) / (1024 - 768)));
-}
-
-.banner-tablet__image_android {
-  width: 395px;
-  height: 550px;
-}
-
-.banner-tablet__image_ios {
-  width: 387px;
-  height: 540px;
-}
-
-.banner-tablet__image_windows {
-  width: 332px;
-  height: 542px;
-}
-
-.banner-tablet__btn_open {
-  margin-top: 55px;
-  margin-bottom: 70px;
+  .app-badge__image_ios-tab {
+    height: 225px;
+  }
 }
 
 @media (min-width: 414px) {
 
-  .banner-mobile__message {
+  .app-badge__message_mobile {
     font-size: 24px;
   }
 }
 
 @media (min-width: 1024px) {
 
-  .banner-tablet__message {
-    font-size: 30px;
+  .app-badge__message_tablet {
+    font-size: 36px;
+  }
+
+  .app-badge__btn_open {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-height: 360px) {
+
+  .app-badge__image_windows-mob {
+    height: 145px;
   }
 }
 
 @media (max-width: 768px) {
 
-  .banner-tablet__message {
+  .app-badge__message_tablet {
     font-size: 24px;
   }
 }
 
 @media (max-width: 320px) {
 
-  .banner-mobile__message {
+  .app-badge__message_mobile {
     font-size: 18px;
+  }
+
+  .app-badge__btn_open {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-height: 414px) {
+
+  .app-badge__image_ios-tab {
+    height: 185px;
+  }
+
+  .app-badge__image_windows-tab {
+    height: 165px;
+  }
+}
+
+@media only screen and (max-height: 1024px) {
+
+  .app-badge__image_android-tab {
+    height: 300px;
+  }
+
+  .app-badge__image_ios-tab {
+    height: 325px;
+  }
+
+  .app-badge__image_windows-tab {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+
+  .app-badge__image_android-tab {
+    height: 245px;
+  }
+
+  .app-badge__image_ios-tab {
+    height: 300px;
+  }
+
+  .app-badge__image_windows-tab {
+    height: 245px;
+  }
+}
+
+@media only screen and (max-height: 329px) {
+
+  .app-badge__image_android-tab {
+    height: 145px;
+  }
+}
+
+@media only screen and (max-height: 320px) {
+
+  .app-badge__image_android-mob, .app-badge__image_ios-mob {
+    height: 125px;
+  }
+
+  .app-badge__image_windows-mob {
+    height: 135px;
+  }
+}
+
+@media only screen and (max-height: 375px) {
+
+  .app-badge__image_android-mob, .app-badge__image_ios-mob {
+    height: 175px;
+  }
+}
+
+@media only screen and (max-height: 425px) {
+
+  .app-badge__image_android-mob, .app-badge__image_ios-mob {
+    height: 155px;
+  }
+
+  .app-badge__image_windows-mob {
+    height: 200px;
   }
 }
 
